@@ -1,0 +1,278 @@
+:root {
+  /*Primary*/
+  --Tomato: hsl(4, 100%, 67%);
+  --Tomato-Light: rgba(255, 98, 87, 0.1);
+  /* Neutral*/
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("ttf"),
+       url("/assets/fonts/Roboto-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--Dark-Slate-Grey);
+}
+
+body {
+  background-color: var(--Charcoal-Grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 930px;
+  height: 640px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--White);
+  padding: 0 20px;
+  border-radius: 40px;
+}
+
+.success-message {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 525px;
+  width: 500px;
+  padding: 50px 60px;
+}
+
+.main-left {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 375px;
+  margin-left: 45px;
+}
+
+.main-left h1 {
+  font-size: 3.5rem;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 20px;
+}
+
+.success-h1 {
+  font-size: 3.5rem;
+  line-height: 3.6rem;
+}
+
+.main-left p {
+  color: var(--Dark-Slate-Grey);
+  width: 360px;
+  margin-bottom: 25px;
+  line-height: 1.5rem;
+}
+
+.success-p {
+  line-height: 1.5rem;
+}
+
+#submitted-email {
+  font-weight: bold;
+}
+
+.features {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.feature img {
+  margin-right: 10px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+form label,
+#error-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#error-label {
+  color: var(--Tomato);
+}
+
+.hidden {
+  display: none;
+}
+
+.input-error {
+  background-color: var(--Tomato-Light) !important;
+  border: 1px solid var(--Tomato) !important;
+  color: var(--Tomato) !important;
+}
+
+.input-error:focus {
+  outline-color: var(--Tomato) !important;
+}
+
+input[type="email"] {
+  height: 55px;
+  padding-left: 25px;
+  border: 1px solid var(--Grey);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+
+input[type="email"]:focus {
+  outline: 0.5px solid var(--Charcoal-Grey);
+}
+
+.submit {
+  height: 55px;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.success-btn {
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--Tomato);
+}
+
+#mobile-image {
+  display: none;
+}
+
+.attribution {
+  text-align: center;
+  color: var(--White);
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: var(--White);
+}
+
+.attribution a:hover {
+  color: var(--Grey);
+}
+
+@media (max-width: 375px) {
+  #desktop-image {
+    display: none;
+  }
+  #mobile-image {
+    display: block;
+    margin-bottom: 40px;
+  }
+  body {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--White);
+  }
+
+  main {
+    flex-direction: column-reverse;
+    justify-content: baseline;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .main-left {
+    margin-left: 50px;
+  }
+
+  .main-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .main-left p,
+  .feature {
+    width: 300px;
+  }
+
+  .main-left p {
+    margin-bottom: 25px;
+  }
+
+  .features {
+    margin-bottom: 50px;
+  }
+
+  .feature img {
+    margin-right: 15px;
+    align-self: flex-start;
+  }
+
+  label {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 325px;
+  }
+
+  .attribution {
+    font-size: 0.7rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+
+  /* success message */
+
+  .success-message {
+    height: 100vh;
+    width: 100vw;
+    padding: 0 20px;
+    display: block;
+  }
+
+  .success-icon {
+    margin-top: 150px;
+    margin-bottom: 40px;
+  }
+  .success-h1 {
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+    margin-bottom: 15px;
+  }
+
+  .success-p {
+    margin-bottom: 290px;
+  }
+}
